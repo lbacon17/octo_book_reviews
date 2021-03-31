@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Octo Book Reviews{% block extra_title %}{% endblock %}</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="{% url 'account_login' %}">Login</a>
+        </li>
+        <li>
+            <a href="{% url 'account_signup' %}">Register</a>
+        </li>
+    </ul>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
