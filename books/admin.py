@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Book
+from .models import Book, Category
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
 
 
 class BookAdmin(admin.ModelAdmin):
@@ -15,3 +22,4 @@ class BookAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Book, BookAdmin)
+admin.site.register(Category, CategoryAdmin)

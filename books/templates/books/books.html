@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                {% for book in books %}
+                    {{ book.title }}
+                    <hr>
+                    {{ book.author }}
+                    <hr>
+                    {{ book.category }}
+                    <hr>
+                    {{ book.summary }}
+                    <hr>
+                    {{ book.price }}
+                    <hr>
+                    {{ book.rating }}
+                    <hr>
+                    <img src="{{ book.image.url }}" alt="{{ book.title }}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
