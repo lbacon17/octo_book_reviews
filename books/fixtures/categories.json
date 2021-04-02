@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "books.category",
+        "fields": {
+            "name": "fiction",
+            "friendly_name": "Fiction"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "books.category",
+        "fields": {
+            "name": "sci_fi",
+            "friendly_name": "Sci-Fi"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "books.category",
+        "fields": {
+            "name": "non_fiction",
+            "friendly_name": "Non-Fiction"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "books.category",
+        "fields": {
+            "name": "biographies",
+            "friendly_name": "Biographies"
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk": 1,
+        "model": "books.book",
+        "fields": {
+            "category": 1,
+            "title": "The Fate of Mercy Alban",
+            "author": "Wendy Webb",
+            "published": 2013,
+            "summary": "Grace Alban has spent twenty years away from her childhood home, the stately Alban House, for reasons she would rather forget. But when her mother's unexpected death brings Grace and her teenage daughter home, she finds more haunting the halls and passageways of Alban House than her own personal demons.",
+            "price": 13.99,
+            "rating": 0.00,
+            "image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351182409l/15818568.jpg",
+            "image": "the_fate_of_mercy_alban.png"
+        }
+    }
+]
