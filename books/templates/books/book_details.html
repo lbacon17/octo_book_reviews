@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid container-md">
+        <div class="row my-5">
+            <div class="col-12 col-md-6 col-lg-5">
+                <img src="{{ book.image.url }}" alt="{{ book.title }}" class="w-100">
+            </div>
+            <div class="col-12 col-md-6 col-lg-7">
+                <h6>{{ book.title }}</h6>
+                <p class="small mb-0">Author: <span class="text-muted">{{ book.author }}</span></p>
+                <p class="small"><i class="fas fa-tags"></i> {{ book.category.friendly_name }}</p>
+                <p>{{ book.summary }}</p>
+                <p class="small">£{{ book.price }}</p>
+                <p class="text-muted">Rating: {{ book.rating }}</p>            
+            </div>
+        </div>
+    </div>
+{% endblock %}

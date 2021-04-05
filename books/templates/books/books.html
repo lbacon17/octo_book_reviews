@@ -2,24 +2,32 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                {% for book in books %}
-                    {{ book.title }}
-                    <hr>
-                    {{ book.author }}
-                    <hr>
-                    {{ book.category }}
-                    <hr>
-                    {{ book.summary }}
-                    <hr>
-                    {{ book.price }}
-                    <hr>
-                    {{ book.rating }}
-                    <hr>
-                    <img src="{{ book.image.url }}" alt="{{ book.title }}">
-                {% endfor %}
-            </div>
+        <div class="row my-5">
+            {% for book in books %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title text-center mt-2">
+                                {{ book.title }}
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="image-container">
+                                <a href="{% url 'book_details' book.id %}">
+                                    <img src="{{ book.image.url }}" alt="{{ book.title }}" class="w-100">
+                                </a>
+                            </div>
+                            <p class="small mb-0">Author: <span class="text-muted">{{ book.author }}</span></p>
+                            <p class="small"><i class="fas fa-tags"></i> {{ book.category.friendly_name }}</p>
+                            <p>{{ book.summary }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="small">£{{ book.price }}</p>
+                            <p class="text-muted">Rating: {{ book.rating }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

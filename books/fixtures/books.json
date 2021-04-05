@@ -13,5 +13,20 @@
             "image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351182409l/15818568.jpg",
             "image": "the_fate_of_mercy_alban.png"
         }
+    },
+    {
+        "pk": 2,
+        "model": "books.book",
+        "fields": {
+            "category": 1,
+            "title": "The Other Side of Midnight",
+            "author": "Simone St. James",
+            "published": 2015,
+            "summary": "London, 1925. Glamorous medium Gloria Sutter made her fortune helping the bereaved contact loved ones killed during the Great War. Now she's been murdered at one of her own séances, after leaving a message requesting the help of her former friend and sole rival, Ellie Winter.",
+            "price": 9.99,
+            "rating": 0.00,
+            "image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1405870017l/22467404.jpg",
+            "image": "the_other_side_of_midnight.png"
+        }
     }
 ]
