@@ -28,5 +28,20 @@
             "image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1405870017l/22467404.jpg",
             "image": "the_other_side_of_midnight.png"
         }
+    },
+    {
+        "pk": 3,
+        "model": "books.book",
+        "fields": {
+            "category": 2,
+            "title": "Body of Stars",
+            "author": "Laura Maylene Walter",
+            "published": 2021,
+            "summary": "An exploration of fate and female agency in a world very similar to our own--except that the markings on women's bodies reveal the future. A piercing indictment of rape culture, a read about what happens when women are objectified and stripped of choice--and what happens when they fight back.",
+            "price": 6.99,
+            "rating": 0.00,
+            "image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596431129l/54419236.jpg",
+            "image": "body_of_stars.png"
+        }
     }
 ]
