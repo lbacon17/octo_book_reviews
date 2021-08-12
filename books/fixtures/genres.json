@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "books.genre",
+        "fields": {
+            "name": "fantasy",
+            "friendly_name": "Fantasy"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "books.genre",
+        "fields": {
+            "name": "historical_fiction",
+            "friendly_name": "Historical Fiction"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "books.genre",
+        "fields": {
+            "name": "lgbt",
+            "friendly_name": "LGBT"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "books.genre",
+        "fields": {
+            "name": "mystery",
+            "friendly_name": "Mystery"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "books.genre",
+        "fields": {
+            "name": "dystopian",
+            "friendly_name": "Dystopian"
+        }
+    }
+]
