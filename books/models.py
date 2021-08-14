@@ -57,3 +57,13 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Review(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Reviews'
+
+    book = models.ForeignKey(Book, null=False, blank=False, on_delete=models.CASCADE, related_name='reviews')
+    review_content = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)

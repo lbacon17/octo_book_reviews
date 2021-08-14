@@ -1,0 +1,8 @@
+<h6 class="mt-3">Add Review</h6>
+<form action="{% url 'book_details' book.id %}" method="POST">
+    {% csrf_token %}
+    {{ review_form | crispy }}
+    <div class="text-center">
+        <button class="btn-lg btn-success">Submit Review</button>
+    </div>
+</form>
