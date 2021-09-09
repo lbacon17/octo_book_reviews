@@ -36,6 +36,9 @@ class Genre(models.Model):
 
 class Book(models.Model):
 
+    class Meta:
+        verbose_name_plural = 'Books'
+
     def current_year():
         return datetime.date.today().year
 
@@ -67,3 +70,7 @@ class Review(models.Model):
     book = models.ForeignKey(Book, null=False, blank=False, on_delete=models.CASCADE, related_name='reviews')
     review_content = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.review_content

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, Category, Genre
+from .models import Book, Category, Genre, Review
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -28,6 +28,15 @@ class BookAdmin(admin.ModelAdmin):
     ordering = ('title',)
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'book',
+        'created_on',
+        'approved',
+    )
+
+
 admin.site.register(Book, BookAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Genre, GenreAdmin)
+admin.site.register(Review, ReviewAdmin)
