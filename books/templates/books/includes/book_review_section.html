@@ -12,6 +12,19 @@
     </div>
     <div class="col-12">
         <p class="small my-2">{{ reviews|length }} review{% if reviews|length != 1 %}s{% endif %}</p>
+        {% if request.user.is_superuser %}
+            {% if pending_reviews %}
+                <h6 class="mt-3">Reviews pending approval</h6>
+                {% for review in pending_reviews %}
+                    <div class="card">
+                        <p class="small mt-2 ml-2">{{ review.created_on }}</p>
+                        <p class="mt-0 ml-2">{{ review.review_content }}</p>
+                        <button>Reject</button>
+                        <a href="{% url 'approve_review' book.id review.id %}" class="btn-sm btn-success">Approve</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
         {% for review in reviews %}
             <div class="card">
                 <p class="small mt-2 ml-2">On {{ review.created_on }}</p>
@@ -19,6 +32,7 @@
                     {{ review.review_content }}
                     {% if request.user.is_superuser %}
                         <span class="float-right">
+                            <a href="" class="btn-sm btn-primary">Edit</a>
                             <button type="button" id="modal-trigger-review-{{ book.id }}-{{ review.id }}" class="btn-sm btn-danger mr-2 border-0">Delete</button>
                             {% include 'books/includes/delete_review_modal_popup.html' %}
                         </span>
