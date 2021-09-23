@@ -74,3 +74,11 @@ class Review(models.Model):
 
     def __str__(self):
         return self.review_content
+
+
+class Rating(models.Model):
+    book = models.ForeignKey(Book, null=False, blank=False, on_delete=models.CASCADE, related_name='ratings')
+    score = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(5)])
+
+    def __str__(self):
+        return str(self.pk)
