@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'books/css/style.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="container-fluid container-md">
         <div class="row my-5">
@@ -14,12 +18,12 @@
                 <p>{{ book.summary }}</p>
                 <p class="small">£{{ book.price }}</p>
                 <p class="text-muted">Rating: {{ book.rating }}</p>  
-                <p class="small">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                <form class="rating-form" action="" method="POST">
+                    <button type="submit" class="fa fa-star checked rating-button" id="oneStar"></button>
+                    <button type="submit" class="fa fa-star checked rating-button" id="twoStar"></button>
+                    <button type="submit" class="fa fa-star checked rating-button" id="threeStar"></button>
+                    <button type="submit" class="fa fa-star checked rating-button" id="fourStar"></button>
+                    <button type="submit" class="fa fa-star checked rating-button" id="fiveStar"></button>
                 </p>          
             </div>
         </div>
@@ -29,4 +33,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script src="{% static 'books/js/ratings.js' %}"></script>
 {% endblock %}
