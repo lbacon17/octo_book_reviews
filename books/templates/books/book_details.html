@@ -19,6 +19,7 @@
                 <p class="small">£{{ book.price }}</p>
                 <p class="text-muted">Rating: {{ book.rating }}</p>  
                 <form class="rating-form" action="" method="POST">
+                    {% csrf_token %}
                     <button type="submit" class="fa fa-star checked rating-button" id="oneStar"></button>
                     <button type="submit" class="fa fa-star checked rating-button" id="twoStar"></button>
                     <button type="submit" class="fa fa-star checked rating-button" id="threeStar"></button>
@@ -26,6 +27,7 @@
                     <button type="submit" class="fa fa-star checked rating-button" id="fiveStar"></button>
                 </p>          
             </div>
+            <div id="confirm-box"></div>
         </div>
         <div class="row">
             <div class="col-12">
